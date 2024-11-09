@@ -1,0 +1,49 @@
+-- Crear la base de datos
+CREATE DATABASE empresa;
+
+-- Usar la base de datos
+USE empresa;
+
+-- Crear la tabla 'cliente'
+CREATE TABLE cliente (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellidos VARCHAR(500) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    telefono VARCHAR(20)
+);
+
+-- Crear la tabla 'transacciones'
+CREATE TABLE transacciones (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cliente_id INT NOT NULL,t
+    fecha DATE NOT NULL,
+    valor DECIMAL(10, 2) NOT NULL,
+    tipo ENUM('deposito', 'retiro') NOT NULL
+);
+
+
+Título: Gestión de Clientes en una Aplicación JavaFX con Bases de Datos SQL y MongoDB
+Descripción: Desarrolla una aplicación JavaFX para gestionar clientes de una empresa, utilizando una base de datos SQL para almacenar
+             los datos de los clientes y una base de datos MongoDB para almacenar un registro de las transacciones realizadas por cada cliente.
+             (Un mismo cliente puede tener varias transacciones, pero cada transacción solo puede ser de un único cliente).
+Objetivo: La aplicación debe permitir al usuario realizar las siguientes acciones:
+    1. Agregar, consultar, actualizar y eliminar clientes en la base de datos SQL.
+    2. Registrar transacciones de cada cliente en MongoDB.
+    3. Visualizar el historial de transacciones de un cliente seleccionado en la interfaz de JavaFX.
+Requisitos Técnicos:
+    1. Interfaz JavaFX:
+        - La interfaz debe incluir una tabla para mostrar la lista de clientes almacenados en SQL.
+        - Debe tener formularios de entrada para agregar o editar clientes (nombre, apellido, correo electrónico y número de teléfono).
+        - La interfaz también debe tener un botón para registrar una transacción y otro para ver el historial de transacciones de un cliente.
+    2. Base de datos SQL (MySQL o PostgreSQL):
+        - Debe tener una tabla clientes con los campos id (auto incrementable), nombre, apellido, email, y telefono.
+        - Implementa las operaciones de CRUD (Crear, Leer, Actualizar, Eliminar) para los clientes en la base de datos SQL.
+    3. Base de datos MongoDB:
+        - En MongoDB, crea una colección transacciones donde cada documento representa una transacción con los siguientes campos:
+            * id (de la transacción)
+            * cliente (referencia al ID de la tabla clientes en SQL -- nombre y apellidos)
+            * fecha (fecha de la transacción)
+            * valor (valor de la transacción)
+            * tipo (indica si la transacción fue un depósito o un retiro).
+        - Permite que el usuario registre transacciones y que cada transacción quede vinculada al cliente correspondiente.
