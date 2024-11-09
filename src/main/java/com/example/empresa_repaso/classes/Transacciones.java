@@ -8,12 +8,12 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "Transacciones")
-public class Transacciones implements Serializable {
+public class Transacciones{
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    @Column(name = "id")
-    private int id;
+    @Column(name = "id_transaccion")
+    private int id_transaccion;
 
     @Column(name = "fecha")
     private LocalDate fecha;
@@ -32,8 +32,8 @@ public class Transacciones implements Serializable {
     public Transacciones() {
     }
 
-    public Transacciones(int id, LocalDate fecha, double valor, TipoTransaccion tipo, Cliente cliente) {
-        this.id = id;
+    public Transacciones(int id_transaccion, LocalDate fecha, double valor, TipoTransaccion tipo, Cliente cliente) {
+        this.id_transaccion = id_transaccion;
         this.fecha = fecha;
         this.valor = valor;
         this.tipo = tipo;
@@ -47,11 +47,11 @@ public class Transacciones implements Serializable {
     }
 
     public int getId() {
-        return id;
+        return id_transaccion;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int id_transaccion) {
+        this.id_transaccion = id_transaccion;
     }
 
     public LocalDate getFecha() {

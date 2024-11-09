@@ -96,4 +96,16 @@ public class Cliente implements Serializable {
     public void setTransacciones(List<Transacciones> transacciones) {
         this.transacciones = transacciones;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", email='" + email + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", transacciones=" + transacciones +
+                '}';
+    }
 }

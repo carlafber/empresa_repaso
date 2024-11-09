@@ -11,8 +11,8 @@ public class EmpresaApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(EmpresaApplication.class.getResource("clientes.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("EMPRESA");
         stage.setScene(scene);
         stage.show();
     }

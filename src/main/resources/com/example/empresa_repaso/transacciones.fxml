@@ -27,8 +27,8 @@
             <TableColumn fx:id="tc_id" prefWidth="56.78715515136719" text="ID" />
             <TableColumn fx:id="tc_cliente" prefWidth="163.24664306640625" text="Cliente" />
             <TableColumn fx:id="tc_fecha" prefWidth="147.75332641601562" text="Fecha" />
-            <TableColumn fx:id="tc_email" prefWidth="113.9364013671875" text="Valor" />
-            <TableColumn fx:id="tc_telefono" prefWidth="123.512451171875" text="Tipo" />
+            <TableColumn fx:id="tc_valor" prefWidth="113.9364013671875" text="Valor" />
+            <TableColumn fx:id="tc_tipo" prefWidth="123.512451171875" text="Tipo" />
          </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -55,7 +55,7 @@
             <Font name="Gill Sans Nova Light" size="20.0" />
          </font>
       </Text>
-      <TextField fx:id="txt_email" layoutX="110.0" layoutY="259.0" prefHeight="40.0" prefWidth="245.0">
+      <TextField fx:id="txt_valor" layoutX="110.0" layoutY="259.0" prefHeight="40.0" prefWidth="245.0">
          <font>
             <Font name="Gill Sans Nova Light" size="20.0" />
          </font>
